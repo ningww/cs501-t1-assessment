@@ -22,7 +22,6 @@ class UsersAPI(MethodView):
                     "registered_on": user.registered_on.strftime("%a, %d %b %Y %H:%M:%S %Z"),
                     "admin": user.admin
                 })
-            print(responseObject)
             return make_response(json.dumps(responseObject)), 201
         except:
             responseObject = {
