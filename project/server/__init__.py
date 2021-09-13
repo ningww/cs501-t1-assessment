@@ -27,6 +27,7 @@ app_settings = os.getenv(
     'project.server.config.DevelopmentConfig'
 )
 app.config.from_object(app_settings)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://cwtjuflsbhcrmx:baf223a3602190d79551d4053f67a570f9c19cad55830b9397f523265e77cd01@ec2-34-228-154-153.compute-1.amazonaws.com:5432/dbdm8vojh3b75j'
 
 bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
